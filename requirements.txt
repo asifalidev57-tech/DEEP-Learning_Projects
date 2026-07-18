@@ -5,3 +5,4 @@ scikit_learn
 tensorboard
 matplotlib
 streamlit
+seaborn
