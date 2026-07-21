@@ -24,6 +24,7 @@ uploaded_file = st.file_uploader(
     "Upload Image",
     type=["png","jpg","jpeg"]
 )
+
 if uploaded_file is not None:
         image = Image.open(uploaded_file)
 
@@ -39,14 +40,16 @@ if uploaded_file is not None:
         img_array = img_array.reshape(1, 28, 28, 1)
 
         prediction = model.predict(img_array)
-
         prediction = tf.nn.softmax(prediction)
+
         predicted_class = np.argmax(prediction)
+
         confidence = np.max(prediction)
+
         st.success(
-        f"Prediction: {class_names[predicted_class]}"
-         )
+              f"Prediction: {class_names[predicted_class]}"
+        )
 
         st.write(
-        f"Confidence: {confidence*100:.2f}%"
-         )
+              f"Confidence: {confidence*100:.2f}%"
+        )

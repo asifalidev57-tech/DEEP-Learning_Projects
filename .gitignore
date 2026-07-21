@@ -2,12 +2,15 @@
 venv/
 env/
 .venv/
+*.h5
 =======
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
 *$py.class
-
+*.h5
+train/
+val/
 # C extensions
 *.so
 
