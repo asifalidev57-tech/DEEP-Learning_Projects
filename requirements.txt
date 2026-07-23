@@ -7,3 +7,5 @@ matplotlib
 streamlit
 seaborn
 nltk
+bs4
+pydantic
